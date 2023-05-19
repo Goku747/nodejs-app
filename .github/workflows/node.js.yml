@@ -12,14 +12,15 @@ on:
       - main
 
 jobs:
-  build:
+  test:
 
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
-        node-version: [16.x, 18.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+        node-version: [16.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/ (if required we 
+        #can add multiple node versions and the app will be executed in all the node versions mentioned.
 
     steps:
     - uses: actions/checkout@v3
