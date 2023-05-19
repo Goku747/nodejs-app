@@ -5,3 +5,8 @@ var app = express();app.get('/', function (req, res) {
   console.log('Example app listening on port 3000!');
 });
 module.exports = app;
+
+// Kill after "x" milliseconds
+setTimeout(() => {
+  process.exit()
+}, 8000);
