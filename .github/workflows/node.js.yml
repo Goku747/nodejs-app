@@ -31,6 +31,6 @@ jobs:
         cache: 'npm'
     - run: |
         npm install
-        CI=true node_modules/.bin/mocha test/test.js
+        CI=true node_modules/.bin/mocha test/test.js --exit
       env:
         CI: true
