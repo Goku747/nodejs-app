@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: njshello
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: njshello
+  template:
+    metadata:
+      labels:
+        app: njshello
+    spec:
+      containers:
+      - name: sample-nodejs-application
+        image: goku747/njs-hello:latest
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 3000

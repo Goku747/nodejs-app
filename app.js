@@ -7,6 +7,6 @@ var app = express();app.get('/', function (req, res) {
 module.exports = app;
 
 // Kill after "x" milliseconds
-setTimeout(() => {
-  process.exit()
-}, 8000);
+//setTimeout(() => {
+//  process.exit()
+//}, 10000);
