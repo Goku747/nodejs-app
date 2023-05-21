@@ -4,6 +4,4 @@ var app = require('../app.js');describe('GET /', function() {
  request(app).get('/').expect('This is my first nodejs app!', done);
  });
 });
-if (app==0) {
-	process.exit();
-}
+
